@@ -1,0 +1,53 @@
+```text
+BEGIN
+
+Create a 3x3 game board with all spaces empty
+
+Set current player to X
+Set game status to running
+
+WHILE game is running
+
+    Display the game board
+
+    Ask current player to enter a row number
+    Ask current player to enter a column number
+
+    IF selected position is outside the board
+        Display "Invalid move"
+        Continue to next loop iteration
+    END IF
+
+    IF selected position is already occupied
+        Display "Square already taken"
+        Continue to next loop iteration
+    END IF
+
+    Place current player symbol in selected position
+
+    Check all rows for matching symbols
+    Check all columns for matching symbols
+    Check both diagonals for matching symbols
+
+    IF current player has three matching symbols
+        Display game board
+        Display current player wins
+        End game
+    END IF
+
+    IF all board positions are filled
+        Display game board
+        Display draw game
+        End game
+    END IF
+
+    IF current player is X
+        Change current player to O
+    ELSE
+        Change current player to X
+    END IF
+
+END WHILE
+
+END
+```
